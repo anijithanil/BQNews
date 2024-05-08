@@ -1,6 +1,6 @@
 
 
-function Navbar() {
+function Navbar({setCategory}) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -15,15 +15,24 @@ function Navbar() {
           <a className="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Features</a>
+          <div className="nav-link" role="button" onClick={()=>setCategory("general")}>General</div>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">Pricing</a>
+          <div className="nav-link" role="button" onClick={()=>setCategory("business")}>Business</div>
         </li>
         <li className="nav-item">
-          <a className="nav-link disabled" href="#"  aria-disabled="true">Disabled</a>
-          {/* tabindex="-1" */}
+          <div className="nav-link" role="button" onClick={()=>setCategory("entertainment")}>Entertainment</div>
         </li>
+        <li className="nav-item">
+          <div className="nav-link" role="button" onClick={()=>setCategory("health")}>Health</div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link" role="button" onClick={()=>setCategory("sports")}>Sports</div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link" role="button" onClick={()=>setCategory("technology")}>Technology</div>
+        </li>
+
       </ul>
     </div>
   </div>
