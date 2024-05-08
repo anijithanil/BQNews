@@ -12,11 +12,19 @@ useEffect(()=>{
   return (
     <div>
       <h1 className="text-center">Latest <span className="badge bg-danger">News</span></h1>
+      <div className="text-center">
+
+      
       {
         article.map((news,index)=>{
             return <NewsItem key={index} title={news.title} description={news.description} url={news.url} src={news.urlToImage}/>
+                
+            
+            
+            
         })
       }
+      </div>
     </div>
   )
 }
