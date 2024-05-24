@@ -9,7 +9,7 @@ function NewsItem({title,description,url,src}) {
             <img src={src?src:image} style={{width:"310px",height:"200px"}} className="card-img-top" alt="..."/>
                 <div className="card-body">
                     <h5 className="card-title">{title.slice(0,50)}</h5>
-                    <p className="card-text">{description?description.slice(0,90):"no news for this we extremely sorry"}</p>
+                    <p className="card-text">{description?description.slice(0,100):"no news for this we extremely sorry"}</p>
                     <a href={url} className="btn btn-primary">Read more</a>
                 </div>
         </div>
